@@ -239,6 +239,8 @@ type ChatCompletionRequest struct {
 	Tools        []Tool `json:"tools,omitempty"`
 	// This can be either a string or an ToolChoice object.
 	ToolChoice any `json:"tool_choice,omitempty"`
+	ToolInput  any `json:"tool_input,omitempty"`
+	//ExtraBody  any `json:"extra_body,omitempty"`
 	// Options for streaming response. Only set this when you set stream: true.
 	StreamOptions *StreamOptions `json:"stream_options,omitempty"`
 	// Disable the default behavior of parallel tool calls by setting it: false.
