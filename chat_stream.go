@@ -36,7 +36,8 @@ type ChatCompletionStreamResponse struct {
 	// An optional field that will only be present when you set stream_options: {"include_usage": true} in your request.
 	// When present, it contains a null value except for the last chunk which contains the token usage statistics
 	// for the entire request.
-	Usage *Usage `json:"usage,omitempty"`
+	Usage  *Usage `json:"usage,omitempty"`
+	Status int64  `json:"status,omitempty"`
 }
 
 // ChatCompletionStream
